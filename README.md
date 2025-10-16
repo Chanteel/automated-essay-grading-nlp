@@ -3,18 +3,16 @@
 **Author:** Chanteel Kimathi  
 **Institution:** USIU-Africa  
 
----
 
-## 📘 Project Overview  
+## Project Overview  
 
 Manual essay grading is time-consuming and subjective, often leading to inconsistent evaluation.  
 This project develops a **hybrid NLP-based Automated Essay Scoring (AES)** system that uses both **linguistic features** and **semantic embeddings (SBERT)** to predict scores for argumentative essays and generate structured feedback aligned with marking rubrics.  
 
 The model aims to reach **human-level scoring agreement** (Quadratic Weighted Kappa ≥ 0.80) and provide **actionable, rubric-based feedback** on content, organization, and language use.  
 
----
 
-## 📊 Dataset  
+##  Dataset  
 
 - **Source:** [Kaggle ASAP-AES Competition](https://www.kaggle.com/competitions/asap-aes)  
 - **Essays Used:** Sets 2 and 6 (argumentative essays)  
@@ -23,9 +21,8 @@ The model aims to reach **human-level scoring agreement** (Quadratic Weighted Ka
   A small demonstration file, `asap_argumentative_sample.csv`, containing **200 essays**, is included for testing and reproducibility.  
   *(The full dataset is too large to host on GitHub but is publicly available on Kaggle.)*
 
----
 
-## ⚙️ Methodology  
+##  Methodology  
 
 ### **1. Preprocessing**
 - Lowercasing, punctuation & number removal  
@@ -44,26 +41,24 @@ The model aims to reach **human-level scoring agreement** (Quadratic Weighted Ka
 | Baseline (Random Forest) | 0.42 | 0.61 | 0.60 |
 | Hybrid (LightGBM + SBERT) | 0.28 | 0.75 | 0.78 |
 
----
 
-## 💡 Key Insights  
+##  Key Insights  
 
 1. **Semantic context** captured by SBERT embeddings is the strongest predictor of essay quality.  
 2. **Lexical diversity** and **average sentence length** correlate positively with human-assigned scores.  
 3. **Prompt-specific fine-tuning** may further enhance fairness and reduce bias across essay topics.  
 
----
 
-## 🚀 Next Steps  
+
+##  Next Steps  
 
 - Integrate a **template-based feedback generator** (GPT-based) for actionable, rubric-aligned comments.  
 - Improve **fairness and explainability** using SHAP visualizations.  
 - Deploy a **Gradio web demo** for real-time essay scoring and feedback delivery.  
 - Conduct **peer evaluation** to assess feedback quality and usefulness.
 
----
 
-## 🧾 Files in This Repository  
+##  Files in This Repository  
 
 | File | Description |
 |------|--------------|
@@ -72,9 +67,8 @@ The model aims to reach **human-level scoring agreement** (Quadratic Weighted Ka
 | `asap_argumentative_sample.csv` | 200-row sample dataset for demonstration. |
 | `README.md` | This documentation file. |
 
----
 
-## 🧩 Tools and Libraries  
+##  Tools and Libraries  
 
 - Python (Pandas, NumPy, Matplotlib, Seaborn)  
 - NLP: spaCy, NLTK, Sentence-Transformers  
@@ -82,9 +76,8 @@ The model aims to reach **human-level scoring agreement** (Quadratic Weighted Ka
 - Evaluation: Cohen’s Kappa (QWK), MSE, R²  
 - Deployment: Gradio / Streamlit  
 
----
 
-## 🏁 Results Summary  
+##  Results Summary  
 
 The hybrid AES model achieved:
 - **QWK = 0.78** → strong agreement with human raters  
@@ -93,5 +86,5 @@ The hybrid AES model achieved:
 
 These results confirm that combining linguistic structure with semantic embeddings yields more consistent and accurate essay scoring than using traditional surface features alone.  
 
----
+
 
